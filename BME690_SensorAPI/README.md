@@ -1,6 +1,6 @@
 ## Raspberry Pi version of the BME690 API
 
-The BME690 API v 1.0.1 is a C API for the Bosch Sensortec BME690 air quality sensor available from the Bosch Sensortec GitHub. This is a minimal port to remove the COINS dependency and replace with standard Raspbian/Linux functions. 
+The Bosch Sensortec BME690 API v 1.0.1 is a C API for the Bosch Sensortec BME690 air quality sensor. This is a minimal port to remove the COINS dependency and replace with standard Raspbian/Linux functions. 
 
 The API files bme69x.h, bme69x_defs.h, bme69x.c files are unchanged, the majority of the changes to remove COINS are in the examples/common folder and the files common.c common.h, which have been replaced by rpi-common.h and rpi-common.c. 
 Each of the folders self_test, forced_mode, parallel_mode, sequential_mode is self contained and has its own Makefile. 
@@ -30,11 +30,11 @@ The Bus number and I2C address of the sensor are hard coded in rpi-common.c as "
 1.  A BME690 sensor that can be connected via I2C to the PI.
 2.  Raspberry PI
 3.  The i2c-tools package is useful to confirm the sensor is visible on the bus.
-4.  I used Visual Studio Code to make these changes, but it is not needed to build and run the examples.
+4.  Visual Studio Code was used to make these changes, but it is not needed to build and run the examples.
 
 ## Known Issues
 
 1. Hard coding Bus and device details is not good, a parameter file would make sense.
 2. Only limited testing, on a PI5.
 3. The BME680/688 is not supported by this API, it has its own API. If you connect a 688 expect -ve pressure and humidity.
-4. The Makefiles all build with dubugging in mind - "gcc - g"
+4. The Makefiles all build with dubugging in mind: "gcc - g"

@@ -1,4 +1,5 @@
-![Python Version](https://img.shields.io/badge/C-blue.svg)
+![Python Version](https://img.shields.io/badge/C-Code-blue.svg)
+![Sensor](//img.shields.io/badge/BME690.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Version](https://img.shields.io/badge/Raspberry-PI-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-success.svg)

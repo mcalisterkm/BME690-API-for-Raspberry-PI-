@@ -23,18 +23,17 @@ Sample, TimeStamp(ms), Temperature(deg C), Pressure(Pa), Humidity(%), Gas resist
 7, 120570416, 26.89, 100128.86, 49.72, 5684.85, 0xb0
 ```
 
-The Bus number and I2C address of the sensor are hard coded in rpi-common.c as "/dev/i2c-1" and BME69X_I2C_ADDR_LOW (0x76) respectively.
+A parameter file is now supported to set configurable items.
 
 ## Dependencies
 
-1.  A BME690 sensor that can be connected via I2C to the PI.
-2.  Raspberry PI
+1.  A Raspberry Pi (any)
+2.  A BME690 sensor that can be connected via I2C to the PI.
 3.  The i2c-tools package is useful to confirm the sensor is visible on the bus.
 4.  Visual Studio Code was used to make these changes, but it is not needed to build and run the examples.
 
 ## Known Issues
 
-1. Hard coding Bus and device details is not good, a parameter file would make sense.
-2. Only limited testing, on a PI5.
-3. The BME680/688 is not supported by this API, it has its own API. If you connect a 688 expect -ve pressure and humidity.
-4. The Makefiles all build with dubugging in mind: "gcc - g"
+1. Only limited testing, on a PI5.
+2. The BME680/688 is not supported by this API, it has its own API. If you connect a 688 expect -ve pressure and humidity.
+3. The Makefiles all build with dubugging in mind: "gcc - g"

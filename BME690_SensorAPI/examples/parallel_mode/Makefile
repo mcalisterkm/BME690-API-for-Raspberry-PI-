@@ -24,7 +24,7 @@ bme69x.o: $(API_LOCATION)/bme69x.c
 rpi-common.o: ../common/rpi-common.c
 	$(CC) $(CFLAGS)  -c $< -o $@
 
-parallel_mode.o: parallel_mode.c
+parallel_mode.o: parallel_mode.c ../common/config_parser/parser.h
 	$(CC) $(CFLAGS)  -c $< -o $@
 
 parallel_mode: bme69x.o parallel_mode.o rpi-common.o
